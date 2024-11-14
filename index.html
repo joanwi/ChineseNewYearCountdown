@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chinese New Year Countdown</title>
+    <meta name="description" content="Countdown to Chinese New Year - Year of the Dragon" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="bg-red-900 min-h-screen">
+    <div class="fixed inset-0 bg-cover bg-center z-0" style="background-image: url('/lanterns-bg.jpg')"></div>
+    <div class="relative z-10 min-h-screen flex flex-col items-center justify-center text-white px-4">
+      <!-- Share Buttons -->
+      <div class="fixed top-4 left-0 right-0 flex justify-center space-x-3">
+        <button onclick="share('facebook')" class="share-btn" title="Share on Facebook">
+          <img src="https://www.facebook.com/favicon.ico" alt="Facebook" class="social-icon">
+        </button>
+        <button onclick="share('twitter')" class="share-btn" title="Share on X (Twitter)">
+          <img src="https://abs.twimg.com/favicons/twitter.3.ico" alt="X (Twitter)" class="social-icon">
+        </button>
+        <button onclick="share('tumblr')" class="share-btn" title="Share on Tumblr">
+          <img src="https://assets.tumblr.com/images/favicons/favicon.ico" alt="Tumblr" class="social-icon">
+        </button>
+        <button onclick="share('pinterest')" class="share-btn" title="Share on Pinterest">
+          <img src="https://s.pinimg.com/webapp/favicon-54a5b2af.png" alt="Pinterest" class="social-icon">
+        </button>
+        <button onclick="share('reddit')" class="share-btn" title="Share on Reddit">
+          <img src="https://www.redditstatic.com/desktop2x/img/favicon/favicon-32x32.png" alt="Reddit" class="social-icon">
+        </button>
+      </div>
+
+      <!-- Countdown Display -->
+      <div class="text-center">
+        <h1 class="text-5xl md:text-7xl font-bold mb-8 text-yellow-300 drop-shadow-lg">
+          Chinese New Year <span id="targetYear">2024</span>
+        </h1>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <div class="bg-red-800/80 rounded-lg p-4">
+            <div id="days" class="text-4xl md:text-6xl font-bold">00</div>
+            <div class="text-xl">Days</div>
+          </div>
+          <div class="bg-red-800/80 rounded-lg p-4">
+            <div id="hours" class="text-4xl md:text-6xl font-bold">00</div>
+            <div class="text-xl">Hours</div>
+          </div>
+          <div class="bg-red-800/80 rounded-lg p-4">
+            <div id="minutes" class="text-4xl md:text-6xl font-bold">00</div>
+            <div class="text-xl">Minutes</div>
+          </div>
+          <div class="bg-red-800/80 rounded-lg p-4">
+            <div id="seconds" class="text-4xl md:text-6xl font-bold">00</div>
+            <div class="text-xl">Seconds</div>
+          </div>
+        </div>
+        <p class="text-2xl text-yellow-200">Until Year of the Dragon</p>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
